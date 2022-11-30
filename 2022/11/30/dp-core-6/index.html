@@ -8,7 +8,7 @@
     
     <title>设计模式六大原则详解 | Likexiao Blogs</title>
 
-    <meta name="description" content="专注编程和个人生活分享">
+    <meta name="description" content="&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。&lt;/p&gt;">
     <meta name="keywords" content="">
 
     
@@ -16,17 +16,17 @@
     <meta property="og:locale" content="zh-CN,en,default" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content= "设计模式六大原则详解 | Likexiao Blogs"  />
-    <meta property="og:description" content= "专注编程和个人生活分享" />
+    <meta property="og:description" content= "&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。&lt;/p&gt;" />
     <meta property="og:url" content="https://likexiao.github.io/2022/11/30/dp-core-6/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Likexiao" />
     <meta property="article:publisher" content="" />
-    <meta property="og:description" content="专注编程和个人生活分享" />
+    <meta property="og:description" content="&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。&lt;/p&gt;" />
     <meta name="twitter:title" content="设计模式六大原则详解 | Likexiao Blogs"/>
-    <meta name="twitter:description" content="专注编程和个人生活分享"/>
+    <meta name="twitter:description" content="&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。&lt;/p&gt;"/>
     <script type="application/ld+json">
         {
-            "description": "专注编程和个人生活分享",
+            "description": "&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。&lt;/p&gt;",
             "author": { "@type": "Person", "name": "Likexiao" },
             "@type": "BlogPosting",
             "url": "https://likexiao.github.io/2022/11/30/dp-core-6/index.html",
@@ -143,7 +143,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-clb3dw3pb0001lktxct3dacjm" class="article article-type-post" itemscope
+    <article id="post-clb3e00lz0001twtxat3o5ksp" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -189,7 +189,9 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。<br>用不到的原因是还是不能够理解设计模式的思想，无法将这些设计模式和编码遇到的问题联系起来，从而用不到设计模式。<br>其实设计模式的提出都是为了解决一个常见的问题而总结出来的办法。所以当你思考采用何种设计模式的时候，你应该先问问自己当前问题的是什么？根据问题去选取合适的设计模式。<br>等你熟悉了设计模式的以后，你会发现部分设计模式之间存在包含关系，甚至很相像，但是不同的设计模式解决的问题是不一样的。<br>当我们在设计一个模块的时候可以从以下几个角度去考虑：<br>&#96;&#96;</p>
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。</p>
+<span id="more"></span>
+<p>用不到的原因是还是不能够理解设计模式的思想，无法将这些设计模式和编码遇到的问题联系起来，从而用不到设计模式。<br>其实设计模式的提出都是为了解决一个常见的问题而总结出来的办法。所以当你思考采用何种设计模式的时候，你应该先问问自己当前问题的是什么？根据问题去选取合适的设计模式。<br>等你熟悉了设计模式的以后，你会发现部分设计模式之间存在包含关系，甚至很相像，但是不同的设计模式解决的问题是不一样的。<br>当我们在设计一个模块的时候可以从以下几个角度去考虑：<br>&#96;&#96;</p>
 <ul>
 <li>这个模块与其他模块的关系是什么样的？</li>
 <li>模块中哪些部分是不变的，哪些部分是在不断变化的，是如何变化的？</li>
@@ -321,15 +323,15 @@
           </li>
         
           <li>
-            <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/10.Spring/">Spring</a>
-          </li>
-        
-          <li>
             <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/1.Java%E5%9F%BA%E7%A1%80/">Java基础</a>
           </li>
         
           <li>
-            <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/12.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+            <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/10.Spring/">Spring</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/11.MyBatis/">MyBatis</a>
           </li>
         
       </ul>
