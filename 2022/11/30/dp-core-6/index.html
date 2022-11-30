@@ -6,40 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>MyBatis | Likexiao Blogs</title>
+    <title>设计模式六大原则详解 | Likexiao Blogs</title>
 
-    <meta name="description" content="&lt;h1 id=&#34;MyBatis&#34;&gt;&lt;a href=&#34;#MyBatis&#34; class=&#34;headerlink&#34; title=&#34;MyBatis&#34;&gt;&lt;/a&gt;MyBatis&lt;/h1&gt;&lt;h2 id=&#34;和-的区别是什么？&#34;&gt;&lt;a href=&#34;#和-的区别是什么？&#34; class=&#34;headerlink&#34; title=&#34;#{}和${}的区别是什么？&#34;&gt;&lt;/a&gt;#{}和${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$&amp;#123;&amp;#125;&lt;/code&gt;是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为&lt;code&gt;com.mysql.jdbc. Driver&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;是 sql 的参数占位符，MyBatis 会将 sql 中的&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值">
+    <meta name="description" content="专注编程和个人生活分享">
     <meta name="keywords" content="">
 
     
 
     <meta property="og:locale" content="zh-CN,en,default" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "MyBatis | Likexiao Blogs"  />
-    <meta property="og:description" content= "&lt;h1 id=&#34;MyBatis&#34;&gt;&lt;a href=&#34;#MyBatis&#34; class=&#34;headerlink&#34; title=&#34;MyBatis&#34;&gt;&lt;/a&gt;MyBatis&lt;/h1&gt;&lt;h2 id=&#34;和-的区别是什么？&#34;&gt;&lt;a href=&#34;#和-的区别是什么？&#34; class=&#34;headerlink&#34; title=&#34;#{}和${}的区别是什么？&#34;&gt;&lt;/a&gt;#{}和${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$&amp;#123;&amp;#125;&lt;/code&gt;是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为&lt;code&gt;com.mysql.jdbc. Driver&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;是 sql 的参数占位符，MyBatis 会将 sql 中的&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值" />
-    <meta property="og:url" content="https://likexiao.github.io/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/11.MyBatis/index.html" />
+    <meta property="og:title" content= "设计模式六大原则详解 | Likexiao Blogs"  />
+    <meta property="og:description" content= "专注编程和个人生活分享" />
+    <meta property="og:url" content="https://likexiao.github.io/2022/11/30/dp-core-6/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Likexiao" />
     <meta property="article:publisher" content="" />
-    <meta property="og:description" content="&lt;h1 id=&#34;MyBatis&#34;&gt;&lt;a href=&#34;#MyBatis&#34; class=&#34;headerlink&#34; title=&#34;MyBatis&#34;&gt;&lt;/a&gt;MyBatis&lt;/h1&gt;&lt;h2 id=&#34;和-的区别是什么？&#34;&gt;&lt;a href=&#34;#和-的区别是什么？&#34; class=&#34;headerlink&#34; title=&#34;#{}和${}的区别是什么？&#34;&gt;&lt;/a&gt;#{}和${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$&amp;#123;&amp;#125;&lt;/code&gt;是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为&lt;code&gt;com.mysql.jdbc. Driver&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;是 sql 的参数占位符，MyBatis 会将 sql 中的&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值" />
-    <meta name="twitter:title" content="MyBatis | Likexiao Blogs"/>
-    <meta name="twitter:description" content="&lt;h1 id=&#34;MyBatis&#34;&gt;&lt;a href=&#34;#MyBatis&#34; class=&#34;headerlink&#34; title=&#34;MyBatis&#34;&gt;&lt;/a&gt;MyBatis&lt;/h1&gt;&lt;h2 id=&#34;和-的区别是什么？&#34;&gt;&lt;a href=&#34;#和-的区别是什么？&#34; class=&#34;headerlink&#34; title=&#34;#{}和${}的区别是什么？&#34;&gt;&lt;/a&gt;#{}和${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$&amp;#123;&amp;#125;&lt;/code&gt;是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为&lt;code&gt;com.mysql.jdbc. Driver&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;是 sql 的参数占位符，MyBatis 会将 sql 中的&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值"/>
+    <meta property="og:description" content="专注编程和个人生活分享" />
+    <meta name="twitter:title" content="设计模式六大原则详解 | Likexiao Blogs"/>
+    <meta name="twitter:description" content="专注编程和个人生活分享"/>
     <script type="application/ld+json">
         {
-            "description": "&lt;h1 id=&#34;MyBatis&#34;&gt;&lt;a href=&#34;#MyBatis&#34; class=&#34;headerlink&#34; title=&#34;MyBatis&#34;&gt;&lt;/a&gt;MyBatis&lt;/h1&gt;&lt;h2 id=&#34;和-的区别是什么？&#34;&gt;&lt;a href=&#34;#和-的区别是什么？&#34; class=&#34;headerlink&#34; title=&#34;#{}和${}的区别是什么？&#34;&gt;&lt;/a&gt;#{}和${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$&amp;#123;&amp;#125;&lt;/code&gt;是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为&lt;code&gt;com.mysql.jdbc. Driver&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;是 sql 的参数占位符，MyBatis 会将 sql 中的&lt;code&gt;#&amp;#123;&amp;#125;&lt;/code&gt;替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值",
+            "description": "专注编程和个人生活分享",
             "author": { "@type": "Person", "name": "Likexiao" },
             "@type": "BlogPosting",
-            "url": "https://likexiao.github.io/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/11.MyBatis/index.html",
+            "url": "https://likexiao.github.io/2022/11/30/dp-core-6/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -48,11 +38,11 @@
             },
             "name": "Likexiao"
             },
-            "headline": "MyBatis | Likexiao Blogs",
-            "datePublished": "2022-06-15T13:08:10.000Z",
+            "headline": "设计模式六大原则详解 | Likexiao Blogs",
+            "datePublished": "2022-11-30T08:23:28.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://likexiao.github.io/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/11.MyBatis/index.html"
+                "@id": "https://likexiao.github.io/2022/11/30/dp-core-6/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -153,7 +143,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-clb3dw3pn000olktxer2yekql" class="article article-type-post" itemscope
+    <article id="post-clb3dw3pb0001lktxct3dacjm" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -169,7 +159,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      MyBatis
+      设计模式六大原则详解
     </h1>
   
 
@@ -179,11 +169,15 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-06-15T13:08:10.000Z" itemprop="datePublished">2022-06-15</time>
+  <time datetime="2022-11-30T08:23:28.000Z" itemprop="datePublished">2022-11-30</time>
 </div>
 
             
 
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+            </div>
             
 
             
@@ -195,11 +189,22 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h1><h2 id="和-的区别是什么？"><a href="#和-的区别是什么？" class="headerlink" title="#{}和${}的区别是什么？"></a>#{}和${}的区别是什么？</h2><ul>
-<li><code>$&#123;&#125;</code>是 Properties 文件中的变量占位符，它可以用于标签属性值和 sql 内部，属于静态文本替换，比如${driver}会被静态替换为<code>com.mysql.jdbc. Driver</code>。</li>
-<li><code>#&#123;&#125;</code>是 sql 的参数占位符，MyBatis 会将 sql 中的<code>#&#123;&#125;</code>替换为? 号，在 sql 执行前会使用 PreparedStatement 的参数设置方法，按序给 sql 的? 号占位符设置参数值<span id="more"></span></li>
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于设计模式，自己很早之前就看了好多本设计模式书籍，其中一些还看了好几遍，也一直希望自己能在编码的时候把这些设计模式用上去。可是，在日常的打码中，用的做多的就是单例，其次是观察者和建造者模式 ( builder ) 用得比较多，其他的基本很少用到。<br>用不到的原因是还是不能够理解设计模式的思想，无法将这些设计模式和编码遇到的问题联系起来，从而用不到设计模式。<br>其实设计模式的提出都是为了解决一个常见的问题而总结出来的办法。所以当你思考采用何种设计模式的时候，你应该先问问自己当前问题的是什么？根据问题去选取合适的设计模式。<br>等你熟悉了设计模式的以后，你会发现部分设计模式之间存在包含关系，甚至很相像，但是不同的设计模式解决的问题是不一样的。<br>当我们在设计一个模块的时候可以从以下几个角度去考虑：<br>&#96;&#96;</p>
+<ul>
+<li>这个模块与其他模块的关系是什么样的？</li>
+<li>模块中哪些部分是不变的，哪些部分是在不断变化的，是如何变化的？</li>
+<li>类与类之间的关系是怎么样的，为什么需要依赖，怎么可以不依赖？</li>
+<li>要不要加一个接口？接口的存在是为了解决什么问题？</li>
 </ul>
-<h2 id="Xml-映射文件中，除了常见的-select-insert-update-delete-标签之外，还有哪些标签？"><a href="#Xml-映射文件中，除了常见的-select-insert-update-delete-标签之外，还有哪些标签？" class="headerlink" title="Xml 映射文件中，除了常见的 select|insert|update|delete 标签之外，还有哪些标签？"></a>Xml 映射文件中，除了常见的 select|insert|update|delete 标签之外，还有哪些标签？</h2><p><code>&lt;resultMap&gt;</code> 、 <code>&lt;parameterMap&gt;</code> 、 <code>&lt;sql&gt;</code> 、 <code>&lt;include&gt;</code> 、 <code>&lt;selectKey&gt;</code> ，加上动态 sql 的 9 个标签， <code>trim|where|set|foreach|if|choose|when|otherwise|bind</code> 等，其中 <code>&lt;sql&gt;</code> 为 sql 片段标签，通过 <code>&lt;include&gt;</code> 标签引入 sql 片段， <code>&lt;selectKey&gt;</code> 为不支持自增的主键生成策略标签。</p>
+<p>当然，本文并不是教你是如何使用设计模式。而是讲解设计模式的设计原则。设计模式在被设计出来的时候，也是遵循一些规则的。<br>设计模式六大原则，具体如下：</p>
+<ul>
+<li>单一职责原则（类和方法，接口）</li>
+<li>开闭原则 （扩展开放，修改关闭）</li>
+<li>里氏替换原则（基类和子类之间的关系）</li>
+<li>依赖倒置原则（依赖抽象接口，而不是具体对象）</li>
+<li>接口隔离原则（接口按照功能细分）</li>
+<li>迪米特法则 （类与类之间的亲疏关系）<br>每一个设计原则旁边都有个括号，是用来解释，或者描述应用范围的。下面将详细介绍每一个原则。</li>
+</ul>
 
         </div>
 
@@ -218,19 +223,10 @@
     
 <nav class="article-nav">
   
-    <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/2.Java%E5%AE%B9%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
-      <div class="article-nav-title">
-        
-          Java容器
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/3.Java%E5%B9%B6%E5%8F%91/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/10/11/Docker%E5%AE%89%E8%A3%85%20Redis%E5%AE%B9%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">Java并发</div>
+      <div class="article-nav-title">Docker 安装 Redis 容器</div>
     </a>
   
 </nav>
@@ -239,15 +235,15 @@
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=MyBatis - Likexiao Blogs&url=https%3A%2F%2Flikexiao.github.io%2F2022%2F06%2F15%2F%25E5%2585%25AB%25E8%2582%25A1%25E6%2596%2587%2F11.MyBatis%2F">
+            href="https://twitter.com/share?text=设计模式六大原则详解 - Likexiao Blogs&url=https%3A%2F%2Flikexiao.github.io%2F2022%2F11%2F30%2Fdp-core-6%2F">
             <ion-icon name="logo-twitter"></ion-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=MyBatis - Likexiao Blogs&u=https%3A%2F%2Flikexiao.github.io%2F2022%2F06%2F15%2F%25E5%2585%25AB%25E8%2582%25A1%25E6%2596%2587%2F11.MyBatis%2F">
+            href="https://www.facebook.com/sharer.php?title=设计模式六大原则详解 - Likexiao Blogs&u=https%3A%2F%2Flikexiao.github.io%2F2022%2F11%2F30%2Fdp-core-6%2F">
             <ion-icon name="logo-facebook"></ion-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=MyBatis - Likexiao Blogs&url=https://likexiao.github.io/2022/06/15/%E5%85%AB%E8%82%A1%E6%96%87/11.MyBatis/&pic=">
+            href="https://service.weibo.com/share/share.php?title=设计模式六大原则详解 - Likexiao Blogs&url=https://likexiao.github.io/2022/11/30/dp-core-6/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
